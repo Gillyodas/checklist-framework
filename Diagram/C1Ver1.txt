@@ -1,0 +1,45 @@
+workspace {
+
+  model {
+    user = person "Checklist User" {
+      description "Người dùng cuối quản lý các checklist cá nhân"
+    }
+
+    system = softwareSystem "Checklist Platform" {
+      description "Hệ thống quản lý checklist dạng SaaS"
+    }
+
+    auth_module = softwareSystem "Auth Module" {
+      description "Module xác thực nội bộ do hệ thống tự xây dựng"
+    }
+
+    external_email = softwareSystem "Email Provider" {
+      description "Gửi email xác thực và thông báo"
+    }
+
+    user -> system "Quản lý checklist"
+    system -> auth_module "Xác thực người dùng nội bộ"
+    system -> external_email "Gửi email xác thực"
+  }
+
+  views {
+    systemContext system {
+      include *
+      autolayout lr
+    }
+
+    styles {
+      element "SoftwareSystem" {
+        background #1168bd
+        color #ffffff
+      }
+
+      element "Person" {
+        background #08427b
+        color #ffffff
+        shape person
+      }
+    }
+  }
+
+}

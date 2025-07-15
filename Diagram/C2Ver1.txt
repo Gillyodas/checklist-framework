@@ -1,0 +1,107 @@
+workspace {
+
+  model {
+    user = person "Checklist User" {
+      description "Người dùng cuối tạo và quản lý checklist cá nhân"
+    }
+
+    checklist_platform = softwareSystem "Checklist Platform" {
+      description "Hệ thống SaaS quản lý checklist cá nhân"
+
+      webapp = container "Web Frontend" {
+        description "React app gọi API, hiển thị UI"
+        technology "React + TypeScript"
+      }
+
+      api = container "Checklist API" {
+        description """
+        REST API xử lý nghiệp vụ Checklist, Check, Save
+        
+        ✅ Manual Save: xử lý đồng bộ, ghi DB, phản hồi trạng thái lưu thành công/thất bại về frontend
+        """
+        technology "ASP.NET Core"
+      }
+
+      auth = container "Auth Module" {
+        description "Module xác thực người dùng, kiểm tra token"
+        technology "ASP.NET Core lib"
+      }
+
+      db = container "Checklist DB" {
+        description "Lưu checklist và check, hỗ trợ versioning & conflict detection"
+        technology "PostgreSQL"
+      }
+
+      cache = container "Redis Cache" {
+        description "Cache checklist để giảm truy cập DB"
+        technology "Redis"
+      }
+
+      job_queue = container "Job Queue" {
+        description "Xử lý nền các tác vụ Save, Retry Save, Gửi Email"
+        technology "Background Worker (.NET HostedService)"
+      }
+
+      message_queue = container "Message Queue" {
+        description "Giao tiếp bất đồng bộ qua pub/sub giữa API và Job"
+        technology "Kafka / RabbitMQ / Redis Stream"
+      }
+
+      logging = container "Logging Service" {
+        description "Structured logging, trace hành vi hệ thống, hỗ trợ debug & audit"
+        technology "Serilog / Elasticsearch / OTEL"
+      }
+
+      monitoring = container "Monitoring Platform" {
+        description "Theo dõi lỗi hệ thống, latency, trạng thái autosave (Prometheus, Grafana, Sentry)"
+      }
+    }
+
+    email_provider = softwareSystem "Email Provider" {
+      description "Gửi email xác thực và thông báo (VD: SendGrid)"
+    }
+
+    // Luồng tương tác chính
+    user -> webapp "Truy cập UI để quản lý checklist"
+    webapp -> api "Gọi API qua REST"
+
+    api -> auth "Xác thực token và kiểm tra ownership"
+    api -> cache "Truy vấn checklist từ cache"
+    api -> db "Ghi dữ liệu checklist"
+    api -> message_queue "Publish ChecklistSavedEvent"
+    api -> logging "Ghi lại hành vi người dùng và trace checklist state"
+    api -> monitoring "Đẩy metrics: save thành công, độ trễ, error code"
+
+    job_queue -> message_queue "Subscribe ChecklistSavedEvent"
+    job_queue -> db "Ghi hoặc cập nhật checklist nếu cần"
+    job_queue -> cache "Cập nhật lại cache sau khi xử lý"
+    job_queue -> email_provider "Gửi email xác nhận lưu checklist"
+    job_queue -> logging "Log các job đã xử lý và lỗi (nếu có)"
+  }
+
+  views {
+    container checklist_platform {
+      include *
+      autolayout lr
+    }
+
+    styles {
+      element "Container" {
+        background #438dd5
+        color #ffffff
+      }
+
+      element "SoftwareSystem" {
+        background #999999
+        color #ffffff
+      }
+
+      element "Person" {
+        background #08427b
+        color #ffffff
+        shape person
+      }
+    }
+  }
+
+}
