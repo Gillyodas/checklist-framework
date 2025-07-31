@@ -1,5 +1,8 @@
 name: Render PlantUML
 
+permissions:
+  contents: write
+
 on:
   push:
     paths:
@@ -12,16 +15,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
-      - name: Render PlantUML diagrams
-        uses: Timmy/plantuml-action@v1
         with:
-          args: '-tsvg Diagram/*.puml'
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit rendered SVG
+      - name: Install PlantUML
+        run: sudo apt-get update && sudo apt-get install -y plantuml
+
+      - name: Render PlantUML diagrams to SVG
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'actions@github.com'
-          git add Diagram/*.svg || echo "No SVG changes"
-          git diff --cached --quiet || git commit -m "Auto render PlantUML diagrams"
+          mkdir -p Diagram/rendered
+          for file in Diagram/*.puml; do
+            plantuml -tsvg "$file" -o ./rendered
+          done
+
+      - name: Commit rendered diagrams
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add Diagram/rendered/*.svg || echo "No files to add"
+          git diff --cached --quiet || git commit -m "Auto-render PlantUML diagrams"
           git push
