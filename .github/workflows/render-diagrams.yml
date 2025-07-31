@@ -1,0 +1,27 @@
+name: Render PlantUML
+
+on:
+  push:
+    paths:
+      - 'Diagram/**/*.puml'
+      - '.github/workflows/render-diagrams.yml'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Render PlantUML diagrams
+        uses: Timmy/plantuml-action@v1
+        with:
+          args: '-tsvg Diagram/*.puml'
+
+      - name: Commit rendered SVG
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'actions@github.com'
+          git add Diagram/*.svg || echo "No SVG changes"
+          git diff --cached --quiet || git commit -m "Auto render PlantUML diagrams"
+          git push
