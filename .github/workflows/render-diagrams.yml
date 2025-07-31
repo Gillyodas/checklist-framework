@@ -28,10 +28,11 @@ jobs:
             plantuml -tsvg "$file" -o ./rendered
           done
 
-      - name: Commit rendered diagrams
+      - name: Commit and push rendered diagrams
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name "actions-user"
           git config user.email "actions@github.com"
-          git add Diagram/rendered/*.svg || echo "No files to add"
-          git diff --cached --quiet || git commit -m "Auto-render PlantUML diagrams"
-          git push
+          git add Diagram/rendered/*.svg
+          git commit -m "Auto-render PlantUML diagrams" || echo "No changes to commit"
+          git push origin docs
+
