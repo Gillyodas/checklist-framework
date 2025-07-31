@@ -1,3 +1,2 @@
-## Sequence Diagram
-
-![Example UML](../Diagram/example.svg)
+## Example PlantUML
+![UML Diagram](./example.svg)
