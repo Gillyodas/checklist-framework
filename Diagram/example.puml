@@ -1,4 +1,4 @@
 @startuml
 actor User
-User -> "Checklist API": submit check
+User -> "Checklist System": Submit check
 @enduml
