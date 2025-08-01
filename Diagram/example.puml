@@ -1,4 +1,0 @@
-@startuml
-actor User
-User -> "Checklist System": Submit check
-@enduml
