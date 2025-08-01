@@ -1,0 +1,52 @@
+@startuml
+
+' ========================
+'        ACTORS
+' ========================
+actor Guest
+actor User
+
+Guest <|-- User
+
+' ========================
+'      PACKAGED USE CASES
+' ========================
+package "Checklist Framework" {
+  
+  usecase "Create Checklist" as UC_Create
+  usecase "Edit Checklist" as UC_Edit
+  usecase "View Checklist" as UC_View
+
+  usecase "Manipulate Check" as UC_Manipulate
+  usecase "Add Check" as UC_Add
+  usecase "Update Check" as UC_Update
+  usecase "Toggle Check" as UC_Toggle
+  usecase "Delete Check" as UC_Delete
+
+  usecase "Sign In" as UC_SignIn
+  usecase "Sign Out" as UC_SignOut
+  usecase "Sign Up" as UC_SignUp
+}
+
+' ========================
+'     ACTOR RELATIONS
+' ========================
+Guest --> UC_Create
+Guest --> UC_Edit
+Guest --> UC_View
+
+User --> UC_SignIn
+User --> UC_SignOut
+
+' ========================
+'     USE CASE RELATIONS
+' ========================
+UC_SignIn --> UC_SignUp : <<include>>
+
+UC_View --> UC_Manipulate : <<include>>
+UC_Manipulate --> UC_Add : <<include>>
+UC_Manipulate --> UC_Update : <<include>>
+UC_Manipulate --> UC_Toggle : <<include>>
+UC_Manipulate --> UC_Delete : <<include>>
+
+@enduml
