@@ -1,0 +1,49 @@
+@startuml CreateChecklistC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+package "Presentation Layer" {
+  [ChecklistController] <<Controller>>
+  [CreateChecklistModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [CreateChecklistInput] <<InputContract>>
+  [ICreateChecklistUseCase] <<Interface>>
+  [CreateChecklistUseCase] <<UseCase>>
+  [CreateChecklistOutput] <<OutputContract>>
+  [CreateChecklistDTO] <<DTO>>
+}
+
+package "Domain Layer" {
+  [ChecklistName] <<ValueObject>>
+  [Checklist] <<Entity>>
+  [Check] <<Entity>>
+}
+
+package "Infrastructure Layer" {
+  [UserRepository] <<Query>>
+  [ChecklistRepository] <<Command>>
+  [CheckRepository] <<Command>>
+}
+
+' === FLOW ===
+[ChecklistController] --> [CreateChecklistModel]
+[ChecklistController] --> [CreateChecklistInput]
+[ChecklistController] --> [ICreateChecklistUseCase]
+[ICreateChecklistUseCase] --> [CreateChecklistUseCase]
+
+[CreateChecklistUseCase] --> [UserRepository]
+[CreateChecklistUseCase] --> [ChecklistName]
+[CreateChecklistUseCase] --> [Checklist]
+[CreateChecklistUseCase] --> [Check]
+[CreateChecklistUseCase] --> [ChecklistRepository]
+[CreateChecklistUseCase] --> [CheckRepository]
+[CreateChecklistUseCase] --> [CreateChecklistOutput]
+[CreateChecklistOutput] --> [CreateChecklistDTO]
+
+@enduml
