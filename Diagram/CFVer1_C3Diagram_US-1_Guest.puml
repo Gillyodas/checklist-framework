@@ -1,0 +1,60 @@
+@startuml CreateChecklistGuestC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Create Checklist (Guest Flow)
+
+package "Presentation Layer" {
+  [EditChecklistView] <<View>>
+  [CreateChecklistEditor] <<Component>>
+}
+
+package "Application Layer" {
+  [CreateChecklistInput] <<InputContract>>
+  [GuestCreateChecklistUseCase] <<UseCase>>
+  [GuestCreateChecklistOutput] <<OutputContract>>
+  [GuestCreateChecklistDTO] <<DTO>>
+  [GuestDTO] <<DTO>>
+  [ChecklistFactory] <<Factory>>
+  [CheckFactory] <<Factory>>
+  [IGuestStorage] <<Interface>>
+  [IChecklistStorage] <<Interface>>
+}
+
+package "Domain Layer" {
+  [ChecklistName] <<ValueObject>>
+  [CheckName] <<ValueObject>>
+  [Checklist] <<Entity>>
+  [Check] <<Entity>>
+}
+
+package "Infrastructure Layer" {
+  [GuestMetaStorage] <<Query>>
+  [GuestChecklistStorage] <<Command>>
+  [GuestCheckStorage] <<Command>>
+}
+
+' === FLOW ===
+[EditChecklistView] --> [CreateChecklistEditor]
+[CreateChecklistEditor] --> [CreateChecklistInput]
+[CreateChecklistEditor] --> [GuestCreateChecklistUseCase]
+[GuestCreateChecklistUseCase] --> [ChecklistFactory]
+[GuestCreateChecklistUseCase] --> [CheckFactory]
+[GuestCreateChecklistUseCase] --> [ChecklistName]
+[GuestCreateChecklistUseCase] --> [CheckName]
+[GuestCreateChecklistUseCase] --> [Checklist]
+[GuestCreateChecklistUseCase] --> [Check]
+[GuestCreateChecklistUseCase] --> [GuestDTO]
+[GuestCreateChecklistUseCase] --> [GuestMetaStorage]
+[GuestCreateChecklistUseCase] --> [IChecklistStorage]
+[GuestCreateChecklistUseCase] --> [IGuestStorage]
+[IGuestStorage] --> [GuestChecklistStorage]
+[IGuestStorage] --> [GuestCheckStorage]
+[GuestCreateChecklistUseCase] --> [GuestCreateChecklistOutput]
+[GuestCreateChecklistOutput] --> [GuestCreateChecklistDTO]
+
+@enduml

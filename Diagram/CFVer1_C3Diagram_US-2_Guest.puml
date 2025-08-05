@@ -1,0 +1,54 @@
+@startuml EditChecklistGuestC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Edit Checklist (Guest Flow)
+
+package "Presentation Layer" {
+  [EditChecklistView] <<View>>
+  [EditChecklistEditor] <<Component>>
+}
+
+package "Application Layer" {
+  [EditChecklistInput] <<InputContract>>
+  [GuestEditChecklistUseCase] <<UseCase>>
+  [GuestEditChecklistOutput] <<OutputContract>>
+  [GuestEditChecklistDTO] <<DTO>>
+  [ChecklistFactory] <<Factory>>
+  [CheckFactory] <<Factory>>
+  [IGuestStorage] <<Interface>>
+}
+
+package "Domain Layer" {
+  [ChecklistName] <<ValueObject>>
+  [CheckName] <<ValueObject>>
+  [Checklist] <<Entity>>
+  [Check] <<Entity>>
+}
+
+package "Infrastructure Layer" {
+  [GuestChecklistStorage] <<Command+Query>>
+  [GuestCheckStorage] <<Command+Query>>
+}
+
+' === FLOW ===
+[EditChecklistView] --> [EditChecklistEditor]
+[EditChecklistEditor] --> [EditChecklistInput]
+[EditChecklistEditor] --> [GuestEditChecklistUseCase]
+[GuestEditChecklistUseCase] --> [ChecklistFactory]
+[GuestEditChecklistUseCase] --> [CheckFactory]
+[GuestEditChecklistUseCase] --> [ChecklistName]
+[GuestEditChecklistUseCase] --> [CheckName]
+[GuestEditChecklistUseCase] --> [Checklist]
+[GuestEditChecklistUseCase] --> [Check]
+[GuestEditChecklistUseCase] --> [IGuestStorage]
+[IGuestStorage] --> [GuestChecklistStorage]
+[IGuestStorage] --> [GuestCheckStorage]
+[GuestEditChecklistUseCase] --> [GuestEditChecklistOutput]
+[GuestEditChecklistOutput] --> [GuestEditChecklistDTO]
+
+@enduml

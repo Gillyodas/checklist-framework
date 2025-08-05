@@ -1,0 +1,59 @@
+@startuml EditChecklistUserC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Edit Checklist (User Flow)
+
+package "Presentation Layer" {
+  [ChecklistController] <<Controller>>
+  [EditChecklistModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [EditChecklistInput] <<InputContract>>
+  [IEditChecklistUseCase] <<Interface>>
+  [EditChecklistUseCase] <<UseCase>>
+  [EditChecklistOutput] <<OutputContract>>
+  [EditChecklistDTO] <<DTO>>
+  [ChecklistFactory] <<Factory>>
+  [CheckFactory] <<Factory>>
+}
+
+package "Domain Layer" {
+  [ChecklistName] <<ValueObject>>
+  [CheckName] <<ValueObject>>
+  [Checklist] <<Entity>>
+  [Check] <<Entity>>
+}
+
+package "Infrastructure Layer" {
+  [ChecklistRepository (Query)] <<Query>>
+  [CheckRepository (Query)] <<Query>>
+  [ChecklistRepository (Command)] <<Command>>
+  [CheckRepository (Command)] <<Command>>
+}
+
+' === FLOW ===
+[ChecklistController] --> [EditChecklistModel]
+[ChecklistController] --> [EditChecklistInput]
+[ChecklistController] --> [IEditChecklistUseCase]
+[IEditChecklistUseCase] --> [EditChecklistUseCase]
+
+[EditChecklistUseCase] --> [ChecklistRepository (Query)]
+[EditChecklistUseCase] --> [CheckRepository (Query)]
+[EditChecklistUseCase] --> [ChecklistFactory]
+[EditChecklistUseCase] --> [CheckFactory]
+[EditChecklistUseCase] --> [ChecklistName]
+[EditChecklistUseCase] --> [CheckName]
+[EditChecklistUseCase] --> [Checklist]
+[EditChecklistUseCase] --> [Check]
+[EditChecklistUseCase] --> [ChecklistRepository (Command)]
+[EditChecklistUseCase] --> [CheckRepository (Command)]
+[EditChecklistUseCase] --> [EditChecklistOutput]
+[EditChecklistOutput] --> [EditChecklistDTO]
+
+@enduml
