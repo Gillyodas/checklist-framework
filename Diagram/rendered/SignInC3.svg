@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="612px" preserveAspectRatio="none" style="width:1436px;height:612px;" version="1.1" viewBox="0 0 1436 612" width="1436px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="203" x="622.5" y="16.708">C3 - Sign In with Email</text><!--MD5=[0754fe69ac3af9334601915612cb61f4]
+cluster Presentation Layer--><polygon fill="#FFFFFF" points="22,44.9531,178,44.9531,185,67.25,188,67.25,188,261.9531,22,261.9531,22,44.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="185" y1="67.25" y2="67.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="150" x="26" y="59.9482">Presentation Layer</text><!--MD5=[de6cf97a447c0cb999a0ecd0089df131]
+cluster Application Layer--><polygon fill="#FFFFFF" points="212,157.9531,354,157.9531,361,180.25,540,180.25,540,600.9531,212,600.9531,212,157.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="212" x2="361" y1="180.25" y2="180.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="136" x="216" y="172.9482">Application Layer</text><!--MD5=[cc167570a590d8dbd4742108b55f98b1]
+cluster Domain Layer--><polygon fill="#FFFFFF" points="564,383.9531,677,383.9531,684,406.25,1215,406.25,1215,487.9531,564,487.9531,564,383.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="564" x2="684" y1="406.25" y2="406.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="107" x="568" y="398.9482">Domain Layer</text><!--MD5=[fc9d01843663843f76fa1b021ee06788]
+cluster Infrastructure Layer--><polygon fill="#FFFFFF" points="1239,383.9531,1404,383.9531,1411,406.25,1414,406.25,1414,487.9531,1239,487.9531,1239,383.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="1239" x2="1411" y1="406.25" y2="406.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="159" x="1243" y="398.9482">Infrastructure Layer</text><!--MD5=[c89ac8309cbc5a1fcacf9d4096c7468a]
+entity AuthController--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="119" x="52.5" y="79.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="47.5" y="84.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="47.5" y="122.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="69.5" y="102.9482">«Controller»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="62.5" y="119.2451">AuthController</text><!--MD5=[263cca6bd4659d37d715999686e763a8]
+entity SignInModel--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="113" x="55.5" y="192.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="50.5" y="197.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="50.5" y="235.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="93" x="65.5" y="215.9482">«ViewModel»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="70" y="232.2451">SignInModel</text><!--MD5=[0da16003e5260852f485d03316cab91f]
+entity SignInInput--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="133" x="390.5" y="192.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="385.5" y="197.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="385.5" y="235.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="113" x="400.5" y="215.9482">«InputContract»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="418.5" y="232.2451">SignInInput</text><!--MD5=[78f7723797f1ddbcfc7920f12837e5fb]
+entity ISignInUseCase--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="127" x="228.5" y="192.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="223.5" y="197.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="223.5" y="235.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="79" x="252.5" y="215.9482">«Interface»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="238.5" y="232.2451">ISignInUseCase</text><!--MD5=[4603c3c4d115e7250a57197f087a98f7]
+entity SignInUseCase--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="124" x="400" y="305.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="395" y="310.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="395" y="348.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="78" x="423" y="328.9482">«UseCase»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="104" x="410" y="345.2451">SignInUseCase</text><!--MD5=[ed78aa8a99c68f2274fc5c0e01778402]
+entity SignInOutput--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="145" x="378.5" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="373.5" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="373.5" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="125" x="388.5" y="441.9482">«OutputContract»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="90" x="406" y="458.2451">SignInOutput</text><!--MD5=[0425ed9d04ef7ce0ab4d814f4110740e]
+entity SignInDTO--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="404.5" y="531.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="399.5" y="536.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="399.5" y="574.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="49" x="426.5" y="554.9482">«DTO»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="73" x="414.5" y="571.2451">SignInDTO</text><!--MD5=[3148c332aae5dcdd8320f93ca41946d3]
+entity EmailAddress--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="122" x="1077" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1072" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1072" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="102" x="1087" y="441.9482">«ValueObject»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93" x="1091.5" y="458.2451">EmailAddress</text><!--MD5=[9936128b3311a9e8234da9a4c0bb4791]
+entity PlainPassword--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="122" x="920" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="915" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="915" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="102" x="930" y="441.9482">«ValueObject»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="931.5" y="458.2451">PlainPassword</text><!--MD5=[2db837fe5f761d9fb4f4925438bfb077]
+entity PasswordHasher--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="136" x="749" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="744" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="744" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="69" x="782.5" y="441.9482">«Service»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="759" y="458.2451">PasswordHasher</text><!--MD5=[dcae99811b4196a6c2ab057fef074f4c]
+entity TokenGenerator--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="134" x="580" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="575" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="575" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="69" x="612.5" y="441.9482">«Service»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="114" x="590" y="458.2451">TokenGenerator</text><!--MD5=[131ef957277a2e64bc2c66aab59271f7]
+entity UserRepository--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="126" x="1255" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1250" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1250" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="60" x="1288" y="441.9482">«Query»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="106" x="1265" y="458.2451">UserRepository</text><!--MD5=[21ff71c14f65804b51ca288518c30137]
+link AuthController to SignInModel--><path d="M112,133.2331 C112,133.2331 112,187.8631 112,187.8631 " fill="none" id="AuthController-&gt;SignInModel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="112,192.8631,116,183.8631,112,187.8631,108,183.8631,112,192.8631" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[d2642362757e32ed3acf525513382015]
+link AuthController to SignInInput--><path d="M171.7,97.9531 C270.44,97.9531 457,97.9531 457,97.9531 C457,97.9531 457,187.7931 457,187.7931 " fill="none" id="AuthController-&gt;SignInInput" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="457,192.7931,461,183.7931,457,187.7931,453,183.7931,457,192.7931" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[1e7087e58b1a6c137a5b0e2c825a2e3e]
+link AuthController to ISignInUseCase--><path d="M171.94,115.9531 C224.3,115.9531 292,115.9531 292,115.9531 C292,115.9531 292,187.8031 292,187.8031 " fill="none" id="AuthController-&gt;ISignInUseCase" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="292,192.8031,296,183.8031,292,187.8031,288,183.8031,292,192.8031" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[7295425984b81e08f44cfa130ffdb691]
+link ISignInUseCase to SignInUseCase--><path d="M292,246.0631 C292,279.6131 292,332.9531 292,332.9531 C292,332.9531 394.66,332.9531 394.66,332.9531 " fill="none" id="ISignInUseCase-&gt;SignInUseCase" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="399.66,332.9531,390.66,328.9531,394.66,332.9531,390.66,336.9531,399.66,332.9531" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[db39ed2e5044ea2eee302abee635bc6b]
+link SignInUseCase to EmailAddress--><path d="M524.08,323.9531 C691.2,323.9531 1138,323.9531 1138,323.9531 C1138,323.9531 1138,413.7931 1138,413.7931 " fill="none" id="SignInUseCase-&gt;EmailAddress" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1138,418.7931,1142,409.7931,1138,413.7931,1134,409.7931,1138,418.7931" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a232de3b145692f41e4e89024ad3fe3e]
+link SignInUseCase to PlainPassword--><path d="M524.09,332.9531 C661.85,332.9531 981,332.9531 981,332.9531 C981,332.9531 981,413.7931 981,413.7931 " fill="none" id="SignInUseCase-&gt;PlainPassword" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="981,418.7931,985,409.7931,981,413.7931,977,409.7931,981,418.7931" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b3f233bbad32ba48cbfd41a429d88dc5]
+link SignInUseCase to UserRepository--><path d="M524.25,314.9531 C721.23,314.9531 1318,314.9531 1318,314.9531 C1318,314.9531 1318,413.7331 1318,413.7331 " fill="none" id="SignInUseCase-&gt;UserRepository" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1318,418.7331,1322,409.7331,1318,413.7331,1314,409.7331,1318,418.7331" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[bd1846bebe312228934575e05aab7c9d]
+link SignInUseCase to PasswordHasher--><path d="M524.24,341.9531 C626.05,341.9531 817,341.9531 817,341.9531 C817,341.9531 817,413.8031 817,413.8031 " fill="none" id="SignInUseCase-&gt;PasswordHasher" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="817,418.8031,821,409.8031,817,413.8031,813,409.8031,817,418.8031" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[43ca71e3a50d87091629762fb0ec53bd]
+link SignInUseCase to TokenGenerator--><path d="M524.12,350.9531 C577.86,350.9531 647,350.9531 647,350.9531 C647,350.9531 647,413.8731 647,413.8731 " fill="none" id="SignInUseCase-&gt;TokenGenerator" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="647,418.8731,651.0257,409.8846,647.0143,413.8731,643.0257,409.8617,647,418.8731" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[e5b59d3f6e9e8ddf0aead05992f9a2de]
+link SignInUseCase to SignInOutput--><path d="M461.75,359.2331 C461.75,359.2331 461.75,413.8631 461.75,413.8631 " fill="none" id="SignInUseCase-&gt;SignInOutput" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="461.75,418.8631,465.75,409.8631,461.75,413.8631,457.75,409.8631,461.75,418.8631" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[fcf6ffe6fa597fa90935ba79d90e9ed1]
+link SignInOutput to SignInDTO--><path d="M451,472.2331 C451,472.2331 451,526.8631 451,526.8631 " fill="none" id="SignInOutput-&gt;SignInDTO" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="451,531.8631,455,522.8631,451,526.8631,447,522.8631,451,531.8631" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[9ed3f771df90be7c7418044c46da9403]
+@startuml SignInC3
+
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Sign In with Email
+
+package "Presentation Layer" {
+  [AuthController] <<Controller>>
+  [SignInModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [SignInInput] <<InputContract>>
+  [ISignInUseCase] <<Interface>>
+  [SignInUseCase] <<UseCase>>
+  [SignInOutput] <<OutputContract>>
+  [SignInDTO] <<DTO>>
+}
+
+package "Domain Layer" {
+  [EmailAddress] <<ValueObject>>
+  [PlainPassword] <<ValueObject>>
+  [PasswordHasher] <<Service>>
+  [TokenGenerator] <<Service>>
+}
+
+package "Infrastructure Layer" {
+  [UserRepository] <<Query>>
+}
+
+[AuthController] - -> [SignInModel]
+[AuthController] - -> [SignInInput]
+[AuthController] - -> [ISignInUseCase]
+[ISignInUseCase] - -> [SignInUseCase]
+
+[SignInUseCase] - -> [EmailAddress]
+[SignInUseCase] - -> [PlainPassword]
+[SignInUseCase] - -> [UserRepository]
+[SignInUseCase] - -> [PasswordHasher]
+[SignInUseCase] - -> [TokenGenerator]
+[SignInUseCase] - -> [SignInOutput]
+[SignInOutput] - -> [SignInDTO]
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 10:22:07 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 17.0.16+8
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

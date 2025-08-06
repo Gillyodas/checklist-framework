@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="612px" preserveAspectRatio="none" style="width:1114px;height:612px;" version="1.1" viewBox="0 0 1114 612" width="1114px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="202" x="462" y="16.708">C3 - Sign Out Securely</text><!--MD5=[0754fe69ac3af9334601915612cb61f4]
+cluster Presentation Layer--><polygon fill="#FFFFFF" points="22,44.9531,178,44.9531,185,67.25,188,67.25,188,261.9531,22,261.9531,22,44.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="185" y1="67.25" y2="67.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="150" x="26" y="59.9482">Presentation Layer</text><!--MD5=[de6cf97a447c0cb999a0ecd0089df131]
+cluster Application Layer--><polygon fill="#FFFFFF" points="212,157.9531,354,157.9531,361,180.25,733,180.25,733,600.9531,212,600.9531,212,157.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="212" x2="361" y1="180.25" y2="180.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="136" x="216" y="172.9482">Application Layer</text><!--MD5=[fc9d01843663843f76fa1b021ee06788]
+cluster Infrastructure Layer--><polygon fill="#FFFFFF" points="757,496.9531,922,496.9531,929,519.25,1092,519.25,1092,600.9531,757,600.9531,757,496.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="757" x2="929" y1="519.25" y2="519.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="159" x="761" y="511.9482">Infrastructure Layer</text><!--MD5=[c89ac8309cbc5a1fcacf9d4096c7468a]
+entity AuthController--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="119" x="52.5" y="79.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="47.5" y="84.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="47.5" y="122.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="69.5" y="102.9482">«Controller»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="62.5" y="119.2451">AuthController</text><!--MD5=[211d9b649107ebd380d57915790de1cc]
+entity SignOutModel--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="117" x="53.5" y="192.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="48.5" y="197.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="48.5" y="235.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="93" x="65.5" y="215.9482">«ViewModel»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="63.5" y="232.2451">SignOutModel</text><!--MD5=[10fdcb3a354cbddf300f79e0a0a5ae13]
+entity SignOutInput--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="133" x="403.5" y="192.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="398.5" y="197.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="398.5" y="235.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="113" x="413.5" y="215.9482">«InputContract»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="90" x="425" y="232.2451">SignOutInput</text><!--MD5=[c66e50fdbc51dba2a05a2b7c7681b898]
+entity ISignOutUseCase--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="140" x="228" y="192.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="223" y="197.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="223" y="235.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="79" x="258.5" y="215.9482">«Interface»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="238" y="232.2451">ISignOutUseCase</text><!--MD5=[15ef5e45dcab5a159d509010741fa205]
+entity SignOutUseCase--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="137" x="314.5" y="305.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="309.5" y="310.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="309.5" y="348.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="78" x="344" y="328.9482">«UseCase»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="324.5" y="345.2451">SignOutUseCase</text><!--MD5=[bee19dacaeddad41f2018518894b048d]
+entity ISessionStore--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="115" x="408.5" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="403.5" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="403.5" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="79" x="426.5" y="441.9482">«Interface»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="95" x="418.5" y="458.2451">ISessionStore</text><!--MD5=[a6f947afa322f936b1694637da34edb8]
+entity IRefreshTokenStore--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="158" x="559" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="554" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="554" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="79" x="598.5" y="441.9482">«Interface»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="138" x="569" y="458.2451">IRefreshTokenStore</text><!--MD5=[15e6e15d9b5b131d29f28958db729d34]
+entity SignOutOutput--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="145" x="228.5" y="418.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="223.5" y="423.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="223.5" y="461.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="125" x="238.5" y="441.9482">«OutputContract»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="249.5" y="458.2451">SignOutOutput</text><!--MD5=[82b285bc4b561c4b7453c5680ebec2ef]
+entity SignOutDTO--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="106" x="248" y="531.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="243" y="536.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="243" y="574.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="49" x="276.5" y="554.9482">«DTO»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="258" y="571.2451">SignOutDTO</text><!--MD5=[e3314b55fc8d545893d04c7310e90a32]
+entity SessionStore--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="112" x="773" y="531.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="768" y="536.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="768" y="574.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="74" x="792" y="554.9482">«External»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="783" y="571.2451">SessionStore</text><!--MD5=[febd8bba697e8adc90f02d73a04e9255]
+entity RefreshTokenStore--><rect fill="#FEFECE" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="155" x="920.5" y="531.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="915.5" y="536.9531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="915.5" y="574.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="74" x="961" y="554.9482">«External»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="135" x="930.5" y="571.2451">RefreshTokenStore</text><!--MD5=[54bcdc33e30c1b20c36657f6cd7e0dd8]
+link AuthController to SignOutModel--><path d="M112,133.2331 C112,133.2331 112,187.8631 112,187.8631 " fill="none" id="AuthController-&gt;SignOutModel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="112,192.8631,116,183.8631,112,187.8631,108,183.8631,112,192.8631" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[777e4f9d5b5b0cc2560db994056e2884]
+link AuthController to SignOutInput--><path d="M171.52,97.9531 C273.32,97.9531 470,97.9531 470,97.9531 C470,97.9531 470,187.7931 470,187.7931 " fill="none" id="AuthController-&gt;SignOutInput" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="470,192.7931,474,183.7931,470,187.7931,466,183.7931,470,192.7931" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b3913303f322db80631a513fe16ba4a0]
+link AuthController to ISignOutUseCase--><path d="M171.62,115.9531 C226.02,115.9531 298,115.9531 298,115.9531 C298,115.9531 298,187.8031 298,187.8031 " fill="none" id="AuthController-&gt;ISignOutUseCase" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="298,192.8031,302,183.8031,298,187.8031,294,183.8031,298,192.8031" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[111bf9496109e8d920c4a6704ae6a914]
+link ISignOutUseCase to SignOutUseCase--><path d="M341.25,246.2331 C341.25,246.2331 341.25,300.8631 341.25,300.8631 " fill="none" id="ISignOutUseCase-&gt;SignOutUseCase" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.25,305.8631,345.25,296.8631,341.25,300.8631,337.25,296.8631,341.25,305.8631" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[d1d27e0e85587f2f30951b0e824c5ef8]
+link SignOutUseCase to ISessionStore--><path d="M430,359.2331 C430,359.2331 430,413.8631 430,413.8631 " fill="none" id="SignOutUseCase-&gt;ISessionStore" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="430,418.8631,434,409.8631,430,413.8631,426,409.8631,430,418.8631" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[9850285e027ca2e6d63d9ca394933433]
+link ISessionStore to SessionStore--><path d="M466,472.0631 C466,505.6131 466,558.9531 466,558.9531 C466,558.9531 767.68,558.9531 767.68,558.9531 " fill="none" id="ISessionStore-&gt;SessionStore" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="772.68,558.9531,763.68,554.9531,767.68,558.9531,763.68,562.9531,772.68,558.9531" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[6ca62621a1cca12b5b855f1cbe2a260d]
+link SignOutUseCase to IRefreshTokenStore--><path d="M451.67,332.9531 C527.2,332.9531 638,332.9531 638,332.9531 C638,332.9531 638,413.7931 638,413.7931 " fill="none" id="SignOutUseCase-&gt;IRefreshTokenStore" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="638,418.7931,642,409.7931,638,413.7931,634,409.7931,638,418.7931" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[1cb6608e0d3999ef4d3845d008efc549]
+link IRefreshTokenStore to RefreshTokenStore--><path d="M717,445.9531 C822.98,445.9531 998,445.9531 998,445.9531 C998,445.9531 998,526.7931 998,526.7931 " fill="none" id="IRefreshTokenStore-&gt;RefreshTokenStore" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="998,531.7931,1002,522.7931,998,526.7931,994,522.7931,998,531.7931" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[2ffbd245b7d252583ad0a636ddf487b3]
+link SignOutUseCase to SignOutOutput--><path d="M344,359.2331 C344,359.2331 344,413.8631 344,413.8631 " fill="none" id="SignOutUseCase-&gt;SignOutOutput" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="344,418.8631,348,409.8631,344,413.8631,340,409.8631,344,418.8631" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[040deb2b2758bb1aca587c89d7862e1e]
+link SignOutOutput to SignOutDTO--><path d="M301,472.2331 C301,472.2331 301,526.8631 301,526.8631 " fill="none" id="SignOutOutput-&gt;SignOutDTO" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="301,531.8631,305,522.8631,301,526.8631,297,522.8631,301,531.8631" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[7da5b54cfb065d659c9899f80f716405]
+@startuml SignOutC3
+
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Sign Out Securely
+
+package "Presentation Layer" {
+  [AuthController] <<Controller>>
+  [SignOutModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [SignOutInput] <<InputContract>>
+  [ISignOutUseCase] <<Interface>>
+  [SignOutUseCase] <<UseCase>>
+  [ISessionStore] <<Interface>>
+  [IRefreshTokenStore] <<Interface>>
+  [SignOutOutput] <<OutputContract>>
+  [SignOutDTO] <<DTO>>
+}
+
+package "Infrastructure Layer" {
+  [SessionStore] <<External>>
+  [RefreshTokenStore] <<External>>
+}
+
+[AuthController] - -> [SignOutModel]
+[AuthController] - -> [SignOutInput]
+[AuthController] - -> [ISignOutUseCase]
+[ISignOutUseCase] - -> [SignOutUseCase]
+
+[SignOutUseCase] - -> [ISessionStore]
+[ISessionStore] - -> [SessionStore]
+
+[SignOutUseCase] - -> [IRefreshTokenStore]
+[IRefreshTokenStore] - -> [RefreshTokenStore]
+
+[SignOutUseCase] - -> [SignOutOutput]
+[SignOutOutput] - -> [SignOutDTO]
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 10:22:07 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 17.0.16+8
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
