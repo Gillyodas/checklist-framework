@@ -1,0 +1,49 @@
+@startuml SignInC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Sign In with Email
+
+package "Presentation Layer" {
+  [AuthController] <<Controller>>
+  [SignInModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [SignInInput] <<InputContract>>
+  [ISignInUseCase] <<Interface>>
+  [SignInUseCase] <<UseCase>>
+  [SignInOutput] <<OutputContract>>
+  [SignInDTO] <<DTO>>
+}
+
+package "Domain Layer" {
+  [EmailAddress] <<ValueObject>>
+  [PlainPassword] <<ValueObject>>
+  [PasswordHasher] <<Service>>
+  [TokenGenerator] <<Service>>
+}
+
+package "Infrastructure Layer" {
+  [UserRepository] <<Query>>
+}
+
+' === FLOW ===
+[AuthController] --> [SignInModel]
+[AuthController] --> [SignInInput]
+[AuthController] --> [ISignInUseCase]
+[ISignInUseCase] --> [SignInUseCase]
+
+[SignInUseCase] --> [EmailAddress]
+[SignInUseCase] --> [PlainPassword]
+[SignInUseCase] --> [UserRepository]
+[SignInUseCase] --> [PasswordHasher]
+[SignInUseCase] --> [TokenGenerator]
+[SignInUseCase] --> [SignInOutput]
+[SignInOutput] --> [SignInDTO]
+
+@enduml

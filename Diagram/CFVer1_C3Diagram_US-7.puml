@@ -1,0 +1,46 @@
+@startuml SignOutC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Sign Out Securely
+
+package "Presentation Layer" {
+  [AuthController] <<Controller>>
+  [SignOutModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [SignOutInput] <<InputContract>>
+  [ISignOutUseCase] <<Interface>>
+  [SignOutUseCase] <<UseCase>>
+  [ISessionStore] <<Interface>>
+  [IRefreshTokenStore] <<Interface>>
+  [SignOutOutput] <<OutputContract>>
+  [SignOutDTO] <<DTO>>
+}
+
+package "Infrastructure Layer" {
+  [SessionStore] <<External>>
+  [RefreshTokenStore] <<External>>
+}
+
+' === FLOW ===
+[AuthController] --> [SignOutModel]
+[AuthController] --> [SignOutInput]
+[AuthController] --> [ISignOutUseCase]
+[ISignOutUseCase] --> [SignOutUseCase]
+
+[SignOutUseCase] --> [ISessionStore]
+[ISessionStore] --> [SessionStore]
+
+[SignOutUseCase] --> [IRefreshTokenStore]
+[IRefreshTokenStore] --> [RefreshTokenStore]
+
+[SignOutUseCase] --> [SignOutOutput]
+[SignOutOutput] --> [SignOutDTO]
+
+@enduml

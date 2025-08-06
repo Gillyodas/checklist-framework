@@ -1,0 +1,47 @@
+@startuml ViewChecklistUserC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - View Checklist (User Flow)
+
+package "Presentation Layer" {
+  [ChecklistController] <<Controller>>
+  [ViewChecklistModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [ViewChecklistInput] <<InputContract>>
+  [IViewChecklistUseCase] <<Interface>>
+  [ViewChecklistUseCase] <<UseCase>>
+  [ViewChecklistOutput] <<OutputContract>>
+  [ChecklistDTO] <<DTO>>
+}
+
+package "Domain Layer" {
+  [Checklist] <<Entity>>
+  [Check] <<Entity>>
+}
+
+package "Infrastructure Layer" {
+  [ChecklistRepository] <<Query>>
+  [CheckRepository] <<Query>>
+}
+
+' === FLOW ===
+[ChecklistController] --> [ViewChecklistModel]
+[ChecklistController] --> [ViewChecklistInput]
+[ChecklistController] --> [IViewChecklistUseCase]
+[IViewChecklistUseCase] --> [ViewChecklistUseCase]
+
+[ViewChecklistUseCase] --> [ChecklistRepository]
+[ViewChecklistUseCase] --> [CheckRepository]
+[ViewChecklistUseCase] --> [Checklist]
+[ViewChecklistUseCase] --> [Check]
+[ViewChecklistUseCase] --> [ViewChecklistOutput]
+[ViewChecklistOutput] --> [ChecklistDTO]
+
+@enduml

@@ -1,0 +1,53 @@
+@startuml SignUpC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Sign Up with Email
+
+package "Presentation Layer" {
+  [AuthController] <<Controller>>
+  [SignUpModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [SignUpInput] <<InputContract>>
+  [ISignUpUseCase] <<Interface>>
+  [SignUpUseCase] <<UseCase>>
+  [ISendVerificationEmail] <<Interface>>
+  [SignUpOutput] <<OutputContract>>
+  [SignUpDTO] <<DTO>>
+}
+
+package "Domain Layer" {
+  [EmailAddress] <<ValueObject>>
+  [PlainPassword] <<ValueObject>>
+  [User] <<Entity>>
+  [PasswordHasher] <<Service>>
+}
+
+package "Infrastructure Layer" {
+  [UserRepository] <<Command+Query>>
+  [EmailSender] <<External>>
+}
+
+' === FLOW ===
+[AuthController] --> [SignUpModel]
+[AuthController] --> [SignUpInput]
+[AuthController] --> [ISignUpUseCase]
+[ISignUpUseCase] --> [SignUpUseCase]
+
+[SignUpUseCase] --> [EmailAddress]
+[SignUpUseCase] --> [PlainPassword]
+[SignUpUseCase] --> [User]
+[SignUpUseCase] --> [PasswordHasher]
+[SignUpUseCase] --> [UserRepository]
+[SignUpUseCase] --> [ISendVerificationEmail]
+[ISendVerificationEmail] --> [EmailSender]
+[SignUpUseCase] --> [SignUpOutput]
+[SignUpOutput] --> [SignUpDTO]
+
+@enduml

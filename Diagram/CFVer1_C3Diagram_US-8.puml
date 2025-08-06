@@ -1,0 +1,57 @@
+@startuml MergeGuestChecklistC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Merge Guest Checklist on Sign In
+
+package "Presentation Layer" {
+  [AuthController] <<Controller>>
+  [GuestChecklistMergeModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [MergeGuestChecklistInput] <<InputContract>>
+  [IMergeGuestChecklistUseCase] <<Interface>>
+  [MergeGuestChecklistUseCase] <<UseCase>>
+  [ChecklistFactory] <<Factory>>
+  [CheckFactory] <<Factory>>
+  [MergeGuestChecklistOutput] <<OutputContract>>
+  [MergeGuestChecklistDTO] <<DTO>>
+}
+
+package "Domain Layer" {
+  [ChecklistName] <<ValueObject>>
+  [Checklist] <<Entity>>
+  [Check] <<Entity>>
+}
+
+package "Infrastructure Layer" {
+  [GuestChecklistStorage] <<Local Query>>
+  [GuestCheckStorage] <<Local Query>>
+  [ChecklistRepository] <<Command>>
+  [CheckRepository] <<Command>>
+}
+
+' === FLOW ===
+[AuthController] --> [GuestChecklistMergeModel]
+[AuthController] --> [MergeGuestChecklistInput]
+[AuthController] --> [IMergeGuestChecklistUseCase]
+[IMergeGuestChecklistUseCase] --> [MergeGuestChecklistUseCase]
+
+[MergeGuestChecklistUseCase] --> [GuestChecklistStorage]
+[MergeGuestChecklistUseCase] --> [GuestCheckStorage]
+[MergeGuestChecklistUseCase] --> [ChecklistFactory]
+[MergeGuestChecklistUseCase] --> [CheckFactory]
+[MergeGuestChecklistUseCase] --> [ChecklistName]
+[MergeGuestChecklistUseCase] --> [Checklist]
+[MergeGuestChecklistUseCase] --> [Check]
+[MergeGuestChecklistUseCase] --> [ChecklistRepository]
+[MergeGuestChecklistUseCase] --> [CheckRepository]
+[MergeGuestChecklistUseCase] --> [MergeGuestChecklistOutput]
+[MergeGuestChecklistOutput] --> [MergeGuestChecklistDTO]
+
+@enduml

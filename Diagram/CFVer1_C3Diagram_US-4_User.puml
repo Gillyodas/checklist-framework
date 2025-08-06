@@ -1,0 +1,51 @@
+@startuml ManageChecklistItemsUserC3
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+title C3 - Manage Checklist Items (User Flow)
+
+package "Presentation Layer" {
+  [ChecklistController] <<Controller>>
+  [ManipulateCheckModel] <<ViewModel>>
+}
+
+package "Application Layer" {
+  [ManipulateCheckInput] <<InputContract>>
+  [IManipulateCheckUseCase] <<Interface>>
+  [ManipulateCheckUseCase] <<UseCase>>
+  [ManipulateCheckOutput] <<OutputContract>>
+  [ChecklistDTO] <<DTO>>
+  [CheckFactory] <<Factory>>
+}
+
+package "Domain Layer" {
+  [Checklist] <<Entity>>
+  [Check] <<Entity>>
+  [CheckName] <<ValueObject>>
+}
+
+package "Infrastructure Layer" {
+  [ChecklistRepository] <<Query>>
+  [CheckRepository] <<Command+Query>>
+}
+
+' === FLOW ===
+[ChecklistController] --> [ManipulateCheckModel]
+[ChecklistController] --> [ManipulateCheckInput]
+[ChecklistController] --> [IManipulateCheckUseCase]
+[IManipulateCheckUseCase] --> [ManipulateCheckUseCase]
+
+[ManipulateCheckUseCase] --> [ChecklistRepository]
+[ManipulateCheckUseCase] --> [CheckRepository]
+[ManipulateCheckUseCase] --> [CheckFactory]
+[ManipulateCheckUseCase] --> [Checklist]
+[ManipulateCheckUseCase] --> [Check]
+[ManipulateCheckUseCase] --> [CheckName]
+[ManipulateCheckUseCase] --> [ManipulateCheckOutput]
+[ManipulateCheckOutput] --> [ChecklistDTO]
+
+@enduml
